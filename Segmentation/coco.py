@@ -22,7 +22,8 @@ class COCOSegmentation(Dataset):
                  year='2017'):
         super().__init__()
         ann_file = os.path.join(base_dir, 'annotations/instances_{}{}.json'.format(split, year))
-        ids_file = os.path.join(base_dir, 'annotations/{}_ids_{}.pth'.format(split, year))
+        # ids_file = os.path.join(base_dir, 'annotations/{}_ids_{}.pth'.format(split, year))
+        ids_file= '/kaggle/working/val_ids_2017.pth'
         self.img_dir = os.path.join(base_dir, 'images/{}{}'.format(split, year))
         self.split = split
         self.coco = COCO(ann_file)
